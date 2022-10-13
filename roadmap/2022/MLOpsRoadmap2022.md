@@ -389,6 +389,15 @@ Compliance requires:<br/>
 Government agencies, third party accreditation businesses and their subcontractors are required to have access to confidential intellectual property.<br/><br/>Surveillance authorities shall be granted full access to the training, validation and testing datasets used.
 </td>
 </tr>  
+<tr> 
+   <td>Providing mechanisms to treat ML models as part of the broader product/system in which they reside, rather than as independent products.</td>
+   <td>While significantly more complex in practice, at the simplest level, an ML model can be thought of as a function that takes a set of data inputs and produces a data output (prediction).   A solution must acknowledge that ML predictions are always exposed within the context of a broader user experience (interface), whether that experience is an application, report, or otherwise. <br/>
+&nbsp &nbsp- Linking ML assets with the end system(s)/application(s) in which their predictions are used<br/>
+&nbsp &nbsp- Linking multiple ML assets that depend upon each other<br/>
+&nbsp &nbsp- Enabling re-use of ML assets across discrete systems/applications<br/>
+&nbsp &nbsp- Testing, releasing, and deploying ML assets in tandem with their system/application’s test, release and deployment schedule<br/>
+</td>
+</tr>  
 </table>
 
 <br>
@@ -547,6 +556,16 @@ Solutions should provide the ability to specify guardrail metrics and facilitate
     <td>Government regulation of AI</td>
     <td>Proposed regulation creates an urgent requirement for the implementation of many of the technology requirements outlined in the roadmap as existing approaches will cease to be viable upon introduction. This in turn also introduces the need to provide traceable reporting to third parties whilst protecting intellectual property as part of the daily function of regulatory compliance.</td>  
   </tr>
+
+  <tr> 
+   <td>Providing mechanisms to treat ML models as part of the broader product/system in which they reside, rather than as independent products.</td>
+   <td>Tooling should enable models (and their supporting assets) to be distributed as reusable components within a larger system/application (similar to dependency management for software).<br/><br/>
+Tooling should enable explicit dependency management between:<br/>
+&nbsp &nbsp- Models that depend upon other models<br/>
+&nbsp &nbsp- Applications that depend upon models<br/><br/>
+As expressed in other challenges, tooling should enable the same release and deployment process for software and ML assets.
+</td>
+</tr>
   </table>
 
 <br>
