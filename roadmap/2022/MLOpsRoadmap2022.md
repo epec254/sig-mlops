@@ -391,10 +391,11 @@ Government agencies, third party accreditation businesses and their subcontracto
 </tr>  
 <tr> 
    <td>Providing mechanisms to treat ML models as part of the broader product/system in which they reside, rather than as independent products.</td>
-   <td>While significantly more complex in practice, at the simplest level, an ML model can be thought of as a function that takes a set of data inputs and produces a data output (prediction).   A solution must acknowledge that ML predictions are always exposed within the context of a broader user experience (interface), whether that experience is an application, report, or otherwise. <br/>
-&nbsp &nbsp- Linking ML assets with the end system(s)/application(s) in which their predictions are used<br/>
-&nbsp &nbsp- Linking multiple ML assets that depend upon each other<br/>
-&nbsp &nbsp- Enabling re-use of ML assets across discrete systems/applications<br/>
+   <td>While significantly more complex in practice, at the simplest level, an ML model can be thought of as a function that takes a set of data inputs and produces a data output (prediction).  ML predictions are always exposed within the context of a broader user experience (interface), whether that experience is an application, report, or other UI/UX.  Futher complicating the challenge is that sometimes multiple ML models are used in a single user-facing feature or a single ML model is used in multiple user-facing features.<br/>
+   Specific challenges include:<br/>
+&nbsp &nbsp- Associating specific ML assets with the end system(s)/application(s) in which their predictions are used (both for auditability purposes and practical purposes such as release coordination)<br/>
+&nbsp &nbsp- Associating multiple ML assets that depend upon each other<br/>
+&nbsp &nbsp- Enabling re-use of ML assets across multiple discrete systems/applications<br/>
 &nbsp &nbsp- Testing, releasing, and deploying ML assets in tandem with their system/application’s test, release and deployment schedule<br/>
 </td>
 </tr>  
@@ -563,7 +564,7 @@ Solutions should provide the ability to specify guardrail metrics and facilitate
 Tooling should enable explicit dependency management between:<br/>
 &nbsp &nbsp- Models that depend upon other models<br/>
 &nbsp &nbsp- Applications that depend upon models<br/><br/>
-As expressed in other challenges, tooling should enable the same release and deployment process for software and ML assets.
+While covered in detail elsewhere in this roadmap, a specific requirement here is that tooling enables the same release and deployment process for software and ML assets that are used together.
 </td>
 </tr>
   </table>
